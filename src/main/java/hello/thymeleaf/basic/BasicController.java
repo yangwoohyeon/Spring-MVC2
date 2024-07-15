@@ -29,8 +29,8 @@ public class BasicController {
 
     @GetMapping("/variable")
     public String variable(Model model){
-        User userA = new User("userA","10");
-        User userB = new User("userB","10");
+        User userA = new User("userA",10);
+        User userB = new User("userB",10);
 
         List<User> list = new ArrayList<>();
         list.add(userA);
@@ -40,7 +40,11 @@ public class BasicController {
         map.put("userA",userA);
         map.put("userB",userB);
 
-        model.addAttribute("user",)
+        model.addAttribute("user",userA);
+        model.addAttribute("users",list);
+        model.addAttribute("userMap",map);
+
+        return "basic/variable";
     }
 
     @Data
