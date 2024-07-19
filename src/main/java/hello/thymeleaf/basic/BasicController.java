@@ -94,7 +94,7 @@ public class BasicController {
         model.addAttribute("data","Spring!");
         return "basic/operation";
     }
-    @Data
+    @Data //테스트용 데이터
     static class User{
         private String username;
         private int age;
