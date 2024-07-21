@@ -130,6 +130,8 @@ public class BasicController {
         addUsers(model);
         return "basic/javascript";
     }
+
+
     private void addUsers(Model model){
         List<User> list = new ArrayList<>();
         list.add(new User("UserA",10));
@@ -138,6 +140,7 @@ public class BasicController {
 
         model.addAttribute("users",list);
     }
+
     @Data //테스트용 데이터
     static class User{
         private String username;
